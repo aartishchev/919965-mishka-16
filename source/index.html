@@ -33,76 +33,107 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Магазин вязаных изделий "Мишка"</h1>
-    <section class="item-types">
-      <h2 class="item-types__heading">Милые штуки ручной работы для дома</h2>
-      <ul class="item-types__list">
-        <li class="item-types__list-item item-types__list-item--lantern">
-          <a class="item-types__link" href="#">Предметы интерьера</a>
+    <section class="product-types">
+      <h2 class="product-types__heading">Милые штуки ручной работы для дома</h2>
+      <ul class="product-types__list">
+        <li class="product-types__item product-types__item--interior">
+          <a class="product-types__link" href="#">Предметы интерьера</a>
         </li>
-        <li class="item-types__list-item item-types__list-item--brick">
-          <a class="item-types__link" href="#">Детские игрушки</a>
+        <li class="product-types__item product-types__item--toys">
+          <a class="product-types__link" href="#">Детские игрушки</a>
         </li>
       </ul>
     </section>
-    <section class="week-item">
-      <h2 class="week-item__heading">Товар недели</h2>
-      <h3 class="week-item__item">Вязаные корзинки</h3>
-      <p class="week-item__descrition">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
+    <section class="week-product">
+      <h2 class="week-product__heading">Товар недели</h2>
+      <h3 class="week-product__item">Вязаные корзинки</h3>
+      <p class="week-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
         размерах.</p>
       <table>
         <tr>
-          <td class="week-item__feature">Цвет:</td>
-          <td class="week-item__value">«Тиффани»/серый</td>
+          <td class="week-product__feature">Цвет:</td>
+          <td class="week-product__value">«Тиффани»/серый</td>
         </tr>
         <tr>
-          <td class="week-item__feature">Диаметр:</td>
-          <td class="week-item__value">25 см</td>
+          <td class="week-product__feature">Диаметр:</td>
+          <td class="week-product__value">25 см</td>
         </tr>
         <tr>
-          <td class="week-item__feature">Высота:</td>
-          <td class="week-item__value">15 см</td>
+          <td class="week-product__feature">Высота:</td>
+          <td class="week-product__value">15 см</td>
         </tr>
       </table>
-      <a class="week-item__image" href="#">
+      <a class="week-product__image" href="#">
         <img src="#" width="260" height="315" alt="Картинка изделия Вязаные корзинки">
       </a>
-      <p class="week-item__price">Цена: 990 руб.</p>
-      <a class="week-item__link button-link" href="#">Заказать</a>
+      <p class="week-product__price">Цена: 990 руб.</p>
+      <a class="week-product__link button-link" href="#">Заказать</a>
     </section>
     <section class="advantages">
       <h2 class="advantages__heading">Коротко о нас:</h2>
       <ul class="advantages__list">
-        <li class="advantages__list-item advantages__list-item--eco ">
+        <li class="advantages__item advantages__item--eco ">
           <p class="advantages__description">Экологически чистые материалы</p>
         </li>
-        <li class="advantages__list-item advantages__list-item--price">
+        <li class="advantages__item advantages__item--price">
           <p class="advantages__description">Скандинавский стиль по российской цене</p>
         </li>
-        <li class="advantages__list-item advantages__list-item--like">
+        <li class="advantages__item advantages__item--like">
           <p class="advantages__description">Увеличивает лайки на фотографиях</p>
         </li>
-        <li class="advantages__list-item advantages__list-item--craft">
-          <p>Связано вручную с любовью и умилением</p>
+        <li class="advantages__item advantages__item--craft">
+          <p class="advantages__description">Связано вручную с любовью и умилением</p>
         </li>
-        <li class="advantages__list-item advantages__list-item--support">
+        <li class="advantages__item advantages__item--support">
           <p class="advantages__description">Поддержка отечественного производителя</p>
         </li>
-        <li class="advantages__list-item advantages__list-item--pack">
+        <li class="advantages__item advantages__item--pack">
           <p class="advantages__description">Поставляется в подарочной упаковке</p>
         </li>
       </ul>
+    </section>
+    <section class="reviews">
+      <h2 class="reviews__heading">Отзывы</h2>
+      <blockquote class="reviews__item">
+        <p class="reviews__text">
+          Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+          как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу
+          стали более стильными, а также набирают больше лайков!
+        </p>
+        <cite class="reviews__author">
+          <span class="reviews__author-name">Анастасия Красильникова</span>
+          <span class="reviews__author-mail"> @misssssiskras</span>
+        </cite>
+      </blockquote>
+      <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+      <button class="reviews__next" type="button">Следующий отзыв</button>
+      <a class="reviews__write-button button-link" href="#">Написать</a>
+    </section>
+    <section class="contacts">
+      <h2 class="contacts__heading">Контакты</h2>
+      <address class="contacts__info">
+        <p class="contacts__mail">
+          <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        </p>
+        <p class="contacts__location">Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+        <p class="contacts__map">
+          <img class="contacts__mappic" src="#" width="320" height="457"
+            alt="Изображение гугл-карты с местонахождением магазина">
+        </p>
+      </address>
+      <a class="contacts__write-button button-link" href="#">Напишите нам</a>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__social social">
       <ul class="social__list">
-        <li class="social__list-item">
+        <li class="social__item">
           <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
         </li>
-        <li class="social__list-item">
+        <li class="social__item">
           <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
         </li>
-        <li class="social__list-item">
+        <li class="social__item">
           <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
         </li>
       </ul>
