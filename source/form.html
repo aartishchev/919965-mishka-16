@@ -4,28 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="#" width="86" height="35" alt="Логотип магазина Мишка">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item site-list__item--loop">
-            <a href="#">Поиск по сайту</a>
+            <a class="site-list__link" href="#">Поиск по сайту</a>
           </li>
           <li class="site-list__item site-list__item--basket">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="site-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </div>
@@ -37,7 +38,7 @@
       <p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.
       </p>
-      <form class="order__form" action="https://echo.htmlacademy.ru" method="get">
+      <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="order__field">
           <legend class="order__legend">Тип</legend>
           <label class="order__label">
@@ -108,7 +109,7 @@
           <textarea class="order__textarea" maxlength="100">Опишите все ваши пожелания к заказу</textarea>
         </fieldset>
         <small class="order__notation">*Поля обязательны для заполнения</small>
-        <button class="order__form-button button-link" type="submit">Отправить заказ</button>
+        <button class="main-button main-button--submitorder" type="submit">Отправить заказ</button>
       </form>
     </section>
   </main>

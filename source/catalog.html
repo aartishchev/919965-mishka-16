@@ -4,28 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="#" width="86" height="35" alt="Логотип магазина Мишка">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item site-list__item--loop">
-            <a href="#">Поиск по сайту</a>
+            <a class="site-list__link" href="#">Поиск по сайту</a>
           </li>
           <li class="site-list__item site-list__item--basket">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="site-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </div>
@@ -39,30 +40,30 @@
         <li class="goods-catalog__item product-card">
           <h3 class="product-card__heading"><a class="product-card__link" href="#">Зайчик-попрыгайчик</a></h3>
           <a class="product-card__picture" href="#">
-            <img class="product-card__image" src="#" width="260" height="195" alt="Картинка товара Зайчик-попрыгайчик">
+            <img class="product-card__image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Картинка товара Зайчик-попрыгайчик">
           </a>
           <p class="product-card__features">Рост 30 см, вес 200 г</p>
           <b class="product-card__price">1 200 руб.</b>
-          <button class="product-card__button purchase-button" type="button">Положить в корзину</button>
+          <button class="purchase-button purchase-button--catalogcart" type="button">Положить в корзину</button>
         </li>
         <li class="goods-catalog__item product-card">
           <h3 class="product-card__heading"><a class="product-card__link" href="#">Корзинка для белья</a></h3>
           <a class="product-card__picture" href="#">
-            <img class="product-card__image" src="#" width="260" height="195" alt="Картинка товара Корзинка для белья">
+            <img class="product-card__image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Картинка товара Корзинка для белья">
           </a>
           <p class="product-card__features">Диаметр 15 см, высота 10 см</p>
           <b class="product-card__price">690 руб.</b>
-          <button class="product-card__button purchase-button" type="button">Положить в корзину</button>
+          <button class="purchase-button purchase-button--catalogcart" type="button">Положить в корзину</button>
         </li>
         <li class="goods-catalog__item product-card">
           <h3 class="product-card__heading"><a class="product-card__link" href="#">Большая корзинка для игрушек</a></h3>
           <a class="product-card__picture " href="#">
-            <img class="product-card__image" src="#" width="260" height="195"
+            <img class="product-card__image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195"
               alt="Картинка товара Большая корзинка для игрушек">
           </a>
           <p class="product-card__features">Диаметр 30 см, высота 30 см</p>
           <b class="product-card__price">1 500 руб.</b>
-          <button class="product-card__button purchase-button" type="button">Положить в корзину</button>
+          <button class="purchase-button purchase-button--catalogcart" type="button">Положить в корзину</button>
         </li>
       </ul>
     </section>
@@ -74,7 +75,7 @@
       <p class="production__text">
         По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
       </p>
-      <a class="production__order-button button-link" href="#">Сделать заказ</a>
+      <a class="main-button main-button--makeorder" href="#">Сделать заказ</a>
     </section>
   </main>
   <footer class="page-footer">
