@@ -10,7 +10,8 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35"
+        alt="Логотип магазина Мишка">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
@@ -32,7 +33,7 @@
       </div>
     </nav>
   </header>
-  <main class="index-main">
+  <main class="page-main">
     <h1 class="visually-hidden">Магазин вязаных изделий "Мишка"</h1>
     <section class="product-types">
       <h2 class="product-types__heading">Милые штуки ручной работы для дома</h2>
@@ -106,19 +107,28 @@
           <span class="reviews__author-mail"> @misssssiskras</span>
         </cite>
       </blockquote>
-      <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-      <button class="reviews__next" type="button">Следующий отзыв</button>
+      <div class="reviews__wrapper">
+        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+        <button class="reviews__next" type="button">Следующий отзыв</button>
+      </div>
       <a class="main-button main-button--feedback" href="#">Написать</a>
     </section>
     <section class="contacts">
       <h2 class="contacts__heading">Контакты</h2>
       <address class="contacts__info">
-        <p class="contacts__mail">
-          <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        </p>
-        <p class="contacts__location">Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+        <div class="contacts__wrapper">
+          <p class="contacts__mail">
+            <span class="contacts__emailtext">e-mail:</span>
+            <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </p>
+          <p class="contacts__location">
+            <span class="contacts__adresstext">адрес:</span>г. Санкт-Петербург,
+            ул. Большая Конюшенная,
+            д. 19/8, офис 101
+          </p>
+        </div>
         <p class="contacts__map">
-          <img class="contacts__mappic" src="#" width="320" height="457"
+          <img class="contacts__mappic" src="img/map-mobile@1x.jpg" width="322" height="457"
             alt="Изображение гугл-карты с местонахождением магазина">
         </p>
       </address>
