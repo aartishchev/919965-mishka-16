@@ -1,15 +1,24 @@
+.page-header {
+  display       : flex;
+  flex-direction: column;
+}
+
 .page-header__logo {
   display       : block;
   padding-top   : 22px;
   padding-bottom: 22px;
   box-sizing    : border-box;
   border-bottom : 1px solid @border-lightgray;
-
-  width : 86px;
-  margin: 0 auto;
+  text-align    : center;
 }
 
 .page-header__logo-image {
   width : 86px;
   height: 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+  }
 }

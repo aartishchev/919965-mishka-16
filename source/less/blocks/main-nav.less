@@ -1,0 +1,11 @@
+.main-nav__list {
+  display       : flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+  }
+}

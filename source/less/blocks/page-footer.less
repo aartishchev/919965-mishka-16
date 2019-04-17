@@ -1,5 +1,13 @@
 .page-footer {
   background-color: @bg-gray;
+
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .page-footer__copyright {
