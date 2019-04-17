@@ -10,28 +10,36 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35"
-        alt="Логотип магазина Мишка">
-    </a>
     <nav class="main-nav">
       <button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item site-list__item--loop">
-            <a class="site-list__link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="site-list__item site-list__item--basket">
-            <a class="site-list__link" href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </div>
+      <a class="main-nav__logo">
+        <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      </a>
+      <ul class="main-nav__list main-nav__list--goodsorder site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list main-nav__list--searchcart site-list">
+        <li class="site-list__item site-list__item--loop">
+          <a class="site-list__link" href="#">Поиск по сайту</a>
+        </li>
+        <li class="site-list__item site-list__item--basket">
+          <a class="site-list__link" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list main-nav__list--incommingsale site-list">
+        <li class="site-list__item site-list__item--incomming">
+          <a class="site-list__link" href="#">Новые поступления</a>
+        </li>
+        <li class="site-list__item site-list__item--sale">
+          <a class="site-list__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <p class="main-nav__text">Бесплатная доставка по России</p>
     </nav>
   </header>
   <main class="page-main">
