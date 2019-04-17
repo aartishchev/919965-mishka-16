@@ -10,7 +10,8 @@
 <body>
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35"
+        alt="Логотип магазина Мишка">
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
@@ -35,62 +36,91 @@
   <main class="order-page">
     <h1 class="order-page__heading">Вязание на заказ</h1>
     <section class="order">
+      <h2 class="visually-hidden">Форма заказа</h2>
       <p class="order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.
       </p>
       <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="order__field">
           <legend class="order__legend">Тип</legend>
-          <label class="order__label">
-            <input class="order__radio" type="radio" name="type" value="accessory" checked>
-            Аксессуар для интерьера
-          </label>
-          <label class="order__label">
-            <input class="order__radio" type="radio" name="type" value="toy">
-            Детская игрушка
-          </label>
+          <ul class="order__list">
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__radio" type="radio" name="type" value="accessory" checked>
+                Аксессуар для интерьера
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__radio" type="radio" name="type" value="toy">
+                Детская игрушка
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="order__field">
           <legend class="order__legend">Цвет</legend>
-          <label class="order__label">
-            <input class="order__checkbox" type="checkbox" value="white" checked>
-            Белый
-          </label>
-          <label class="order__label">
-            <input class="order__checkbox" type="checkbox" value="gray" checked>
-            Серый
-          </label>
-          <label class="order__label">
-            <input class="order__checkbox" type="checkbox" value="tiffany">
-            «Тиффани»
-          </label>
-          <label class="order__label">
-            <input class="order__checkbox" type="checkbox" value="black">
-            Черный
-          </label>
-          <label class="order__label">
-            <input class="order__checkbox" type="checkbox" value="rose">
-            Розовый
-          </label>
-          <label class="order__label">
-            <input class="order__checkbox" type="checkbox" value="orange">
-            Оранжевый
-          </label>
+          <ul class="order__list">
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__checkbox" type="checkbox" value="white" checked>
+                Белый
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__checkbox" type="checkbox" value="gray" checked>
+                Серый
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__checkbox" type="checkbox" value="tiffany">
+                «Тиффани»
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__checkbox" type="checkbox" value="black">
+                Черный
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__checkbox" type="checkbox" value="rose">
+                Розовый
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                <input class="order__checkbox" type="checkbox" value="orange">
+                Оранжевый
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="order__field">
           <legend class="order__legend">ФИО</legend>
-          <label class="order__label">
-            Имя:
-            <input class="order__name" type="text" placeholder="Введите ваше имя*" maxlength="25" required>
-          </label>
-          <label class="order__label">
-            Фамилия:
-            <input class="order__name" type="text" placeholder="Укажите фамилию*" maxlength="25" required>
-          </label>
-          <label class="order__label">
-            Отчество:
-            <input class="order__name" type="text"  placeholder="Отчество, если желаете" maxlength="25">
-          </label>
+          <ul class="order__list">
+            <li class="order__item">
+              <label class="order__label">
+                Имя:
+                <input class="order__name" type="text" placeholder="Введите ваше имя*" maxlength="25" required>
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                Фамилия:
+                <input class="order__name" type="text" placeholder="Укажите фамилию*" maxlength="25" required>
+              </label>
+            </li>
+            <li class="order__item">
+              <label class="order__label">
+                Отчество:
+                <input class="order__name" type="text" placeholder="Отчество, если желаете" maxlength="25">
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="order__field">
           <legend class="order__legend">Тел</legend>
