@@ -1,15 +1,45 @@
 .page-footer {
   background-color: @bg-gray;
+  margin          : 0 auto;
+}
+
+.page-footer__wrapper {
+  width           : 260px;
+  margin          : 0 auto;
+  background-color: @bg-gray;
 
   display       : flex;
   flex-direction: column;
   align-items   : center;
 
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
+  @media(min-width: @tablet-width) {
+    width          : 768px;
+    flex-direction : row;
+    justify-content: space-between;
+  }
+
+  @media(min-width: @desktop-width) {
+    width: 1150px;
   }
 }
 
 .page-footer__copyright {
   padding: 28px 0;
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media(min-width: @tablet-width) {
+    display   : block;
+    width     : 202px;
+    height    : 143px;
+    text-align: center;
+  }
+}
+
+.page-footer__image {
+  width     : 102px;
+  height    : 34px;
+  margin-top: 51px;
 }

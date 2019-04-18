@@ -1,6 +1,19 @@
 .product-card {
-  border       : 1px solid @border-lightgray;
-  margin-bottom: 30px;
+  display       : flex;
+  flex-direction: column;
+
+  @media(min-width: @tablet-width) {
+    flex-direction : row;
+    justify-content: center;
+  }
+
+  @media(min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.product-card__wrapper {
+  order: 1;
 }
 
 .product-card__link {
@@ -17,7 +30,16 @@
   width  : 260px;
   height : 195px;
   display: block;
-  margin : 0 auto;
+
+  @media(min-width: @tablet-width) {
+    width : 334px;
+    height: 334px;
+  }
+
+  @media(min-width: @desktop-width) {
+    width : 316px;
+    height: 462px;
+  }
 }
 
 .product-card__features {
