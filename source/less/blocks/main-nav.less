@@ -1,84 +1,84 @@
 .main-nav {
-  display       : flex;
-  flex-wrap     : wrap;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items   : center;
+  align-items: center;
 
-  @media(min-width: @tablet-width) {
-    width          : @tablet-width;
-    flex-direction : row;
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    flex-direction: row;
     justify-content: space-between;
-    align-items    : flex-start;
-    margin         : 0 auto;
+    align-items: flex-start;
+    margin: 0 auto;
   }
 
-  @media(min-width: @desktop-width) {
-    width          : @desktop-width;
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
     justify-content: flex-start;
   }
 }
 
 .main-nav__logo {
-  display       : block;
-  padding-top   : 22px;
+  display: block;
+  padding-top: 22px;
   padding-bottom: 22px;
-  box-sizing    : border-box;
-  text-align    : center;
+  box-sizing: border-box;
+  text-align: center;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     order: 1;
     width: 214px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     order: 2;
     width: 180px;
   }
 }
 
 .main-nav__image {
-  width : 86px;
+  width: 86px;
   height: 35px;
 }
 
 .main-nav__list {
   list-style-type: none;
-  margin         : 0;
-  padding        : 0;
+  margin: 0;
+  padding: 0;
 
   &--goodsorder {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    width         : 320px;
+    width: 320px;
 
-    @media(min-width: @tablet-width) {
-      order           : 3;
-      flex-direction  : row;
-      justify-content : flex-end;
-      width           : 372px;
+    @media (min-width: @tablet-width) {
+      order: 3;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 372px;
       background-color: @bg-gray;
     }
 
-    @media(min-width: @desktop-width) {
-      order           : 1;
-      width           : 468px;
+    @media (min-width: @desktop-width) {
+      order: 1;
+      width: 468px;
       background-color: white;
     }
   }
 
   &--searchcart {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    width         : 320px;
+    width: 320px;
 
-    @media(min-width: @tablet-width) {
-      order         : 2;
+    @media (min-width: @tablet-width) {
+      order: 2;
       flex-direction: row;
-      width         : 399px;
+      width: 399px;
     }
 
-    @media(min-width: @desktop-width) {
-      order      : 3;
+    @media (min-width: @desktop-width) {
+      order: 3;
       margin-left: auto;
     }
   }
@@ -86,11 +86,11 @@
   &--incommingsale {
     display: none;
 
-    @media(min-width: @desktop-width) {
-      display         : flex;
-      order           : 4;
+    @media (min-width: @desktop-width) {
+      display: flex;
+      order: 4;
       background-color: @bg-gray;
-      width           : 468px;
+      width: 468px;
     }
   }
 }
@@ -98,22 +98,22 @@
 .main-nav__item {
   text-align: center;
 
-  @media(min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     width: 167px;
   }
 
-  @media(min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     width: 234px;
   }
 
   &--loop {
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       width: 83px;
     }
   }
 
   &--basket {
-    @media(min-width: @tablet-width) {
+    @media (min-width: @tablet-width) {
       width: 316px;
     }
   }
@@ -122,10 +122,10 @@
 .main-nav__link {
   text-decoration-line: none;
 
-  font-size  : 17px;
+  font-size: 17px;
   line-height: 24px;
   font-weight: bold;
-  color      : black;
+  color: black;
 
   box-sizing: border-box;
 }
@@ -133,17 +133,17 @@
 .main-nav__text {
   display: none;
 
-  @media(min-width: @tablet-width) {
-    display         : block;
-    order           : 4;
-    margin          : 0;
-    margin-left     : auto;
+  @media (min-width: @tablet-width) {
+    display: block;
+    order: 4;
+    margin: 0;
+    margin-left: auto;
     background-color: @bg-gray;
   }
 
-  @media(min-width: @desktop-width) {
-    display    : block;
-    order      : 5;
+  @media (min-width: @desktop-width) {
+    display: block;
+    order: 5;
     margin-left: auto;
   }
 }
