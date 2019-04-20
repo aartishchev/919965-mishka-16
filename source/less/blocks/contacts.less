@@ -1,5 +1,18 @@
 .contacts {
-  border-top: 1px solid @border-lightgray;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 772px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 633px;
+  }
 }
 
 .contacts__heading {
@@ -7,13 +20,38 @@
   line-height: 30px;
   font-weight: bold;
 
-  margin-top: 44px;
-  margin-left: 29px;
-  margin-bottom: 42px;
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 670px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 261px;
+    margin-left: 176px;
+    margin-right: 0;
+  }
 }
 
 .contacts__wrapper {
-  margin-bottom: 42px;
+  display: flex;
+  flex-direction: column;
+
+  width: 256px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 670px;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 297px;
+    margin-left: 176px;
+    margin-right: 0;
+    flex-direction: column;
+  }
 }
 
 .contacts__mail {
@@ -23,7 +61,6 @@
   font-style: normal;
 
   margin: 0;
-  margin-left: 29px;
 }
 
 .contacts__location {
@@ -33,21 +70,11 @@
   font-style: normal;
 
   margin: 0;
-  margin-left: 29px;
 }
 
 .contacts__link {
   color: @text-gray;
   text-decoration-line: none;
-  border-bottom: 1px solid @color-seafoam;
-}
-
-.contacts__emailtext {
-  margin-right: 32px;
-}
-
-.contacts__adresstext {
-  margin-right: 32px;
 }
 
 .contacts__map {
@@ -56,4 +83,15 @@
 
   margin: 0 auto;
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 457px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 525px;
+    height: 457px;
+    order: 4;
+  }
 }
