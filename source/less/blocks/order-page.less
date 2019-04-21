@@ -1,55 +1,71 @@
 .order-page__heading {
-  font-size  : 27px;
+  font-size: 27px;
   line-height: 30px;
   font-weight: bold;
 
-  margin          : 0;
-  margin-bottom   : 30px;
-  padding         : 75px 0;
-  text-align      : center;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 75px 0;
+  text-align: center;
   background-color: @bg-gray;
 }
 
 .order__text {
-  font-size  : 13px;
+  font-size: 13px;
   line-height: 24px;
-  color      : @text-gray;
+  color: @text-gray;
 
-  margin       : 0;
-  margin-left  : 30px;
-  margin-bottom: 30px;
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 666px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 650px;
+  }
 }
 
 .order__form {
-  margin-left: 29px;
+  margin: 0 auto;
+  width: 260px;
+
+  @media (min-width: @tablet-width) {
+    width: 666px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 922px;
+  }
 }
 
 .order__field {
-  border : none;
-  margin : 0;
+  border: none;
+  margin: 0;
   padding: 0;
 }
 
 .order__legend {
-  font-size     : 17px;
-  line-height   : 16px;
-  font-weight   : bold;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
   text-transform: uppercase;
-  color         : @color-seafoam;
+  color: @color-seafoam;
 
   margin-bottom: 35px;
 }
 
 .order__label {
-  font-size  : 17px;
+  font-size: 17px;
   line-height: 18px;
   font-weight: bold;
 }
 
 .order__list {
   list-style-type: none;
-  margin         : 0;
-  padding        : 0;
+  margin: 0;
+  padding: 0;
 }
 
 .order__item {
@@ -57,10 +73,10 @@
 }
 
 .order__notation {
-  font-size  : 14px;
+  font-size: 14px;
   line-height: 16px;
-  color      : @text-gray;
+  color: @text-gray;
 
-  display      : block;
+  display: block;
   margin-bottom: 30px;
 }
