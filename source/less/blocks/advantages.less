@@ -1,6 +1,7 @@
 .advantages {
   width: 260px;
   margin: 0 auto;
+  margin-bottom: 61px;
 
   @media (min-width: @tablet-width) {
     width: 670px;
@@ -8,6 +9,7 @@
 
   @media (min-width: @desktop-width) {
     width: 700px;
+    margin-bottom: 82px;
   }
 }
 
@@ -17,29 +19,146 @@
   font-weight: bold;
 
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .advantages__list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 61px;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
 .advantages__item {
   padding-top: 86px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 300px;
+  }
+
+  &--eco {
+    width: 205px;
+    order: 1;
+    margin-right: 129px;
+  }
+
+  &--eco::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 37px;
+    background-image: url("../../img/icon-feature-flower.svg");
+    top: 40px;
+    left: 9px;
+  }
+
+  &--price {
+    width: 235px;
+    order: 3;
+    margin-right: 99px;
+  }
+
+  &--price::before {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 27px;
+    background-image: url("../../img/icon-feature-money.svg");
+    top: 40px;
+    left: 9px;
+  }
+
+  &--like {
+    width: 212px;
+    order: 5;
+    margin-right: 123px;
+  }
+
+  &--like::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 27px;
+    background-image: url("../../img/icon-feature-heart.svg");
+    top: 40px;
+    left: 9px;
+  }
+
+  &--craft {
+    width: 248px;
+    order: 2;
+  }
+
+  &--craft::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    background-image: url("../../img/icon-feature-ball.svg");
+    top: 40px;
+    left: 9px;
+  }
+
+  &--support {
+    width: 295px;
+    order: 4;
+  }
+
+  &--support::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 23px;
+    background-image: url("../../img/icon-feature-rocket.svg");
+    top: 40px;
+    left: 9px;
+  }
+
+  &--pack {
+    width: 233px;
+    order: 6;
+    margin-right: 55px;
+  }
+
+  &--pack::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url("../../img/icon-feature-gift.svg");
+    top: 40px;
+    left: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--eco {
+      margin-right: 145px;
+    }
+
+    &--price {
+      margin-right: 115px;
+    }
+
+    &--like {
+      margin-right: 139px;
+    }
   }
 }
 
@@ -48,4 +167,9 @@
   line-height: 20px;
   font-weight: bold;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
