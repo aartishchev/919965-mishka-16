@@ -1,14 +1,17 @@
 .reviews {
   width: 255px;
   margin: 0 auto;
+  margin-bottom: 95px;
   display: flex;
   flex-direction: column;
 
+
   @media (min-width: @tablet-width) {
-    width: 772px;
+    width: 768px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 80px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,9 +25,12 @@
   font-weight: bold;
 
   margin: 0;
+  margin-bottom: 38px;
 
   @media (min-width: @tablet-width) {
     margin-left: 48px;
+    font-size: 43px;
+    line-height: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,9 +40,11 @@
 
 .reviews__item {
   margin: 0;
+  margin-bottom: 40px;
+  width: 256px;
 
   @media (min-width: @tablet-width) {
-    width: 642px;
+    width: 643px;
     order: 3;
     margin-left: 48px;
   }
@@ -51,17 +59,21 @@
   font-size: 15px;
   line-height: 30px;
   color: @text-gray;
-
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__author {
   font-size: 17px;
-  line-height: 30px;
+  line-height: 24px;
   font-weight: bold;
   font-style: normal;
 
   display: block;
+  margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     order: 4;
@@ -73,19 +85,48 @@
   }
 }
 
-.reviews__author-mail {
-  font-size: 15px;
+.reviews__author-twitter {
+  font-size: 17px;
   line-height: 30px;
   font-weight: normal;
   color: @text-gray;
 
   display: block;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .reviews__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  margin-bottom: 38px;
+  border: 1px solid @border-lightgray;
+
   @media (min-width: @tablet-width) {
-    width: 175px;
+    border: 0;
     order: 5;
   }
+}
+
+.reviews__prev {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-right: 1px solid @border-lightgray;
+  width: 130px;
+  box-sizing: border-box;
+  background-color: white;
+
+  @media (min-width: @tablet-width) {
+    border: 0;
+  }
+}
+
+.reviews__next {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 130px;
+  box-sizing: border-box;
+  background-color: white;
 }

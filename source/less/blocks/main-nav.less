@@ -2,43 +2,124 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
+    width: 768px;
+    box-sizing: border-box;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    justify-content: flex-start;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 19px;
+  right: 21px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  padding: 0;
+  background-color: white;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__list:not(.main-nav__list--incommingsale) {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 10px;
+
+  width: 19px;
+  height: 14px;
+
+  background-image: url("../img/icon-menu-open.svg");
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/icon-menu-close.svg");
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
 .main-nav__logo {
-  display: block;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  box-sizing: border-box;
+  padding: 22px 0 16px;
   text-align: center;
+  border-bottom: 1px solid @border-lightgray;
 
   @media (min-width: @tablet-width) {
     order: 1;
-    width: 214px;
+    width: 112px;
+    border: 0;
+    margin-left: 48px;
   }
 
   @media (min-width: @desktop-width) {
     order: 2;
     width: 180px;
+    padding: 8px 0 4px;
+    margin-left: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .main-nav__image {
   width: 86px;
   height: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+    height: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    height: 73px;
+  }
 }
 
 .main-nav__list {
@@ -49,32 +130,28 @@
   &--goodsorder {
     display: flex;
     flex-direction: column;
-    width: 320px;
 
     @media (min-width: @tablet-width) {
       order: 3;
       flex-direction: row;
-      justify-content: flex-end;
-      width: 372px;
-      background-color: @bg-gray;
+      margin-left: 49px;
     }
 
     @media (min-width: @desktop-width) {
       order: 1;
-      width: 468px;
-      background-color: white;
+      margin: 0;
+
     }
   }
 
   &--searchcart {
     display: flex;
     flex-direction: column;
-    width: 320px;
 
     @media (min-width: @tablet-width) {
       order: 2;
       flex-direction: row;
-      width: 399px;
+      margin-left: auto;
     }
 
     @media (min-width: @desktop-width) {
@@ -89,45 +166,160 @@
     @media (min-width: @desktop-width) {
       display: flex;
       order: 4;
-      background-color: @bg-gray;
-      width: 468px;
-    }
+      }
   }
 }
 
 .main-nav__item {
-  text-align: center;
+  border-bottom: 1px solid @border-lightgray;
 
   @media (min-width: @tablet-width) {
-    width: 167px;
+    border-bottom: 0;
   }
 
-  @media (min-width: @desktop-width) {
-    width: 234px;
-  }
-
-  &--loop {
+  &--sewing {
     @media (min-width: @tablet-width) {
-      width: 83px;
+      margin-left: 37px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
     }
   }
 
-  &--basket {
-    @media (min-width: @tablet-width) {
-      width: 316px;
-    }
+  &:hover .main-nav__link,
+  &:focus .main-nav__link {
+    opacity: 0.6;
+  }
+
+  &:active .main-nav__link {
+    opacity: 0.3;
+  }
+
+  &:hover .main-nav__icon,
+  &:focus .main-nav__icon {
+    fill: @color-seafoam;
+  }
+
+  &:active .main-nav__icon {
+    fill: @color-seafoam;
+    opacity: 0.3;
   }
 }
 
 .main-nav__link {
   text-decoration-line: none;
-
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
   color: black;
 
+  display: block;
+  width: 320px;
+  padding: 26px 0 26px 76px;
+  margin: 0 auto;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
+
+  &--loop {
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      font-size: 0;
+      padding: 0;
+      padding-bottom: 63px;
+      width: 84px;
+      border-left: 1px solid @border-lightgray;
+      border-right: 1px solid @border-lightgray;
+      box-sizing: border-box;
+    }
+  }
+
+  &--basket {
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      padding: 31px 50px 32px 82px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 31px 52px 32px 83px;
+    }
+  }
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      padding: 0;
+      padding-top: 17px;
+      font-size: 15px;
+    }
+
+    @media (min-width: @desktop-width) {
+      font-size: 17px;
+      padding: 31px 36px 33px 49px;
+      border-right: 1px solid @border-lightgray;
+    }
+  }
+
+  &--sewing {
+    @media (min-width: @tablet-width) {
+      padding: 0;
+      padding-top: 17px;
+      font-size: 15px;
+     }
+
+    @media (min-width: @desktop-width) {
+      font-size: 17px;
+      padding: 31px 36px 33px 35px;
+    }
+  }
+
+  &--incomming {
+    @media (min-width: @desktop-width) {
+      font-size: 15px;
+      padding: 16px 26px 16px 51px;
+    }
+  }
+
+  &--sale {
+    @media (min-width: @desktop-width) {
+      font-size: 15px;
+      padding: 16px 35px 16px 35px;
+    }
+  }
+}
+
+.main-nav__icon {
+  position: absolute;
+
+  &--loop {
+    width: 18px;
+    height: 18px;
+    top: 36px;
+    left: 33px;
+    fill: rgba(0, 0, 0, 0.3);
+
+    @media (min-width: @tablet-width) {
+      top: 36px;
+      left: 33px;
+    }
+  }
+
+  &--basket {
+    width: 21px;
+    height: 18px;
+    top: 30px;
+    left: 30px;
+    fill: rgba(0, 0, 0, 0.3);
+
+    @media (min-width: @tablet-width) {
+      top: 34px;
+      left: 31px;
+    }
+  }
 }
 
 .main-nav__text {
@@ -136,14 +328,16 @@
   @media (min-width: @tablet-width) {
     display: block;
     order: 4;
-    margin: 0;
+    margin-right: 50px;
+    margin-top: 17px;
     margin-left: auto;
-    background-color: @bg-gray;
+    font-size: 15px;
+    line-height: 24px;
+    color: @text-gray;
   }
 
   @media (min-width: @desktop-width) {
-    display: block;
     order: 5;
-    margin-left: auto;
+    margin-top: 16px;
   }
 }
