@@ -1,12 +1,40 @@
 .copyright {
-  width: 182px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  min-height: 80px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+      padding-right: 50px;
+  }
+
 }
 
 .copyright__text {
   font-size: 19px;
   line-height: 18px;
   font-weight: bold;
+
+}
+
+.copyright__link {
+  &:hover svg,
+  &:focus svg {
+    fill: #46c1ae;
+  }
+
+  &:active svg {
+    fill: #46c1ae;
+  }
+}
+
+.copyright__linkpic {
+  width: 27px;
+  height: 34px;
+  margin-left: 31px;
+  fill: @color-seafoam;
 }

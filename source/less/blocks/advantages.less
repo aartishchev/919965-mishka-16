@@ -1,17 +1,20 @@
 .advantages {
-  width: 260px;
-  margin: 0 auto;
-  margin-bottom: 61px;
+  width: 320px;
+  margin: 0 auto 54px;
+  padding: 0 28px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 768px;
-    padding: 0 50px;
+    padding: 0 45px;
+    margin-bottom: 82px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1150px;
-    padding: 0 225px;
-    margin-bottom: 82px;
+    padding: 0 220px;
+    padding-right: 235px;
+    margin-bottom: 89px;
   }
 }
 
@@ -21,10 +24,12 @@
   font-weight: bold;
 
   margin: 0;
+  margin-bottom: 4px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -44,21 +49,26 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 40px;
   }
 }
 
 .advantages__item {
-  padding-top: 86px;
   position: relative;
+  padding-top: 83px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 111px;
     width: 300px;
   }
 
   &--eco {
-    width: 205px;
-    order: 1;
-    margin-right: 129px;
+    @media (min-width: @tablet-width){
+      order: 1;
+      padding-top: 103px;
+    }
   }
 
   &--eco::before {
@@ -67,14 +77,15 @@
     width: 32px;
     height: 37px;
     background-image: url("../img/icon-feature-flower.svg");
+    fill: @color-seafoam;
     top: 40px;
     left: 9px;
   }
 
   &--price {
-    width: 235px;
-    order: 3;
-    margin-right: 99px;
+    @media (min-width: @tablet-width){
+      order: 3;
+    }
   }
 
   &--price::before {
@@ -88,9 +99,9 @@
   }
 
   &--like {
-    width: 212px;
-    order: 5;
-    margin-right: 123px;
+    @media (min-width: @tablet-width) {
+      order: 5;
+    }
   }
 
   &--like::before {
@@ -104,8 +115,10 @@
   }
 
   &--craft {
-    width: 248px;
-    order: 2;
+    @media (min-width: @tablet-width) {
+      order: 2;
+      padding-top: 103px;
+    }
   }
 
   &--craft::before {
@@ -119,8 +132,9 @@
   }
 
   &--support {
-    width: 295px;
-    order: 4;
+    @media (min-width: @tablet-width) {
+      order: 4;
+    }
   }
 
   &--support::before {
@@ -134,9 +148,9 @@
   }
 
   &--pack {
-    width: 233px;
-    order: 6;
-    margin-right: 55px;
+    @media (min-width: @tablet-width) {
+      order: 6;
+    }
   }
 
   &--pack::before {
@@ -147,20 +161,6 @@
     background-image: url("../img/icon-feature-gift.svg");
     top: 40px;
     left: 9px;
-  }
-
-  @media (min-width: @desktop-width) {
-    &--eco {
-      margin-right: 145px;
-    }
-
-    &--price {
-      margin-right: 115px;
-    }
-
-    &--like {
-      margin-right: 139px;
-    }
   }
 }
 

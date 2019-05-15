@@ -11,45 +11,58 @@
   text-decoration-line: none;
   text-align: center;
 
+  &:hover,
+  &:focus {
+    background-color: @text-gray;
+    color: white;
+  }
+
+  &:active {
+    background-color: @text-gray;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--weekorder {
-    width: 259px;
-    padding: 20px 0;
-    margin: 0 auto;
-    margin-bottom: 36px;
+    width: 260px;
+    padding: 14px 0;
 
     @media (min-width: @tablet-width) {
       width: 292px;
-      margin: 0;
     }
   }
 
   &--feedback {
     width: 260px;
-    padding: 20px 0;
+    padding: 15px 0;
     font-size: 18px;
 
     @media (min-width: @tablet-width) {
       font-size: 17px;
       width: 175px;
       order: 2;
-      margin-right: 52px;
-      margin-bottom: 53px;
+      margin-right: 5px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+      margin-top: 8px;
     }
   }
 
   &--writeus {
+    font-size: 18px;
     width: 260px;
-    padding: 20px 0;
+    padding: 14px 0;
     margin: 0 auto;
-    margin-bottom: 39px;
 
     @media (min-width: @tablet-width) {
       width: 230px;
+      font-size: 17px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 176px;
-      margin-right: 0;
+      margin: 0;
+      margin-left: 51px;
     }
   }
 
@@ -62,11 +75,13 @@
 
     @media (min-width: @tablet-width) {
       width: 584px;
+      margin-bottom: 46px;
     }
 
     @media (min-width: @desktop-width) {
       width: 230px;
       margin-left: 79px;
+      margin-bottom: 60px;
     }
   }
 
@@ -74,14 +89,15 @@
     background-color: white;
     line-height: 16px;
     width: 260px;
-    padding: 20px 0;
+    padding: 17px 0;
     margin: 0 auto;
     margin-bottom: 55px;
-  }
 
-
-  &--empty {
-    border: none;
-    padding: 0;
+    @media (min-width: @tablet-width) {
+      order: -1;
+      margin: 0;
+      margin-left: 50px;
+      width: 230px;
+    }
   }
 }

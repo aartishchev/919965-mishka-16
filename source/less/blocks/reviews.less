@@ -1,7 +1,8 @@
 .reviews {
-  width: 255px;
-  margin: 0 auto;
-  margin-bottom: 95px;
+  width: 320px;
+  margin: 0 auto 85px;
+  padding: 0 30px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 
@@ -11,11 +12,16 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 80px;
+    padding: 79px 45px 47px;
+    margin-bottom: 145px;
+    background: url("../img/review@2x.jpg") no-repeat;
+    background-size: 350px 457px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1050px;
+    padding: 70px 0px 95px 170px;
+    margin-bottom: 162px;
   }
 }
 
@@ -25,33 +31,25 @@
   font-weight: bold;
 
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 48px;
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 175px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
 .reviews__item {
   margin: 0;
-  margin-bottom: 40px;
-  width: 256px;
 
   @media (min-width: @tablet-width) {
-    width: 643px;
     order: 3;
-    margin-left: 48px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 768px;
-    margin-left: 175px;
   }
 }
 
@@ -60,9 +58,18 @@
   line-height: 30px;
   color: @text-gray;
   margin: 0;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
+    margin-top: 44px;
+    margin-bottom: 58px;
+    padding-left: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 75px;
+    margin-bottom: 39px;
   }
 }
 
@@ -76,12 +83,14 @@
   margin-bottom: 36px;
 
   @media (min-width: @tablet-width) {
+    font-size: 18px;
     order: 4;
-    margin-left: 48px;
+    padding-left: 4px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 175px;
+    font-size: 17px;
   }
 }
 
@@ -92,7 +101,11 @@
   color: @text-gray;
 
   display: block;
-  margin-top: 5px;
+  margin-top: 2px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+  }
 }
 
 .reviews__wrapper {
@@ -102,9 +115,12 @@
   margin-bottom: 38px;
   border: 1px solid @border-lightgray;
 
+  height: 42px;
+
   @media (min-width: @tablet-width) {
     border: 0;
     order: 5;
+    margin-bottom: 0;
   }
 }
 

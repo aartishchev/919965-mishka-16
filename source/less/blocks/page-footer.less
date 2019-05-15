@@ -4,8 +4,9 @@
 }
 
 .page-footer__wrapper {
-  width: 260px;
+  width: 320px;
   margin: 0 auto;
+  box-sizing: border-box;
   background-color: @bg-gray;
 
   display: flex;
@@ -16,6 +17,7 @@
     width: 768px;
     flex-direction: row;
     justify-content: space-between;
+    padding: 32px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,18 +25,22 @@
   }
 }
 
-.page-footer__copyright {
-  padding: 28px 0;
-}
-
 .page-footer__logo {
   display: none;
 
   @media (min-width: @tablet-width) {
     display: block;
-    width: 202px;
-    height: 143px;
-    text-align: center;
+    padding: 0 51px;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #46c1ae;
+  }
+
+  &:active svg {
+    fill: #46c1ae;
+    opacity: 0.3;
   }
 }
 
