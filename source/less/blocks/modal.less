@@ -1,7 +1,7 @@
 .modal {
   width: 320px;
   border: 1px solid #c6c6c6;
-  box-shadow: 0px 5px 10px 0 rgba(0, 1, 1, 0.25);
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   box-sizing: border-box;
   background-color: white;
 
@@ -19,7 +19,7 @@
 }
 
 .modal__show {
-  display: block
+  display: block;
 }
 
 .modal__header {
@@ -30,7 +30,7 @@
   width: 150px;
   margin: 30px auto 13px;
 
-  @media (min-width: @tablet-width){
+  @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 57px;
     width: auto;
@@ -82,7 +82,8 @@
     width: 112px;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border: 2px solid rgba(68, 68, 68, 0.3);
   }
 
@@ -99,8 +100,6 @@
   text-transform: uppercase;
   border: 0;
   background-color: @color-seafoam;
-  color: white;
-
   display: block;
   width: 260px;
   margin: 0 auto 46px;
@@ -120,6 +119,3 @@
     opacity: 0.3;
   }
 }
-
-
-
