@@ -11,6 +11,7 @@
   @media (min-width: @tablet-width) {
     width: 668px;
     border: 0;
+    margin-bottom: 63px;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,6 +46,7 @@
   font-weight: bold;
   margin: 0;
   padding: 24px 0 23px 90px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -52,6 +54,8 @@
     border-top: 1px solid @border-lightgray;
     border-left: 1px solid @border-lightgray;
     border-right: 1px solid @border-lightgray;
+
+    z-index: -1;
   }
 
   @media (min-width: @desktop-width) {
@@ -59,11 +63,31 @@
     padding: 96px 141px 34px 78px;
     border-left: 0;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-video.svg");
+    width: 32px;
+    height: 32px;
+    top: 29px;
+    left: 34px;
+
+    @media (min-width: @tablet-width) {
+      top: 32px;
+      left: 41px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 42px;
+      left: 81px;
+    }
+  }
 }
 
 .production__video {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 27px;
   position: relative;
 
   @media (min-width: @tablet-width) {

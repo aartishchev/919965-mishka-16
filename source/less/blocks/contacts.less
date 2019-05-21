@@ -33,12 +33,32 @@
     line-height: 50px;
     padding-left: 45px;
     margin-bottom: 49px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
     margin-bottom: 48px;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      width: 47px;
+      height: 81px;
+      top: -15px;
+      right: 53px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 0;
+      left: -61px;
+      top: -8px;
+    }
   }
 }
 
@@ -205,5 +225,15 @@
     background: url("../img/icon-map-pin.svg");
     left: 139px;
     top: 145px;
+
+    @media (min-width: @tablet-width) {
+      left: 363px;
+      top: 139px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 241px;
+      top: 146px;
+    }
   }
 }

@@ -126,6 +126,11 @@
 }
 
 .product-card__cartlink {
+
+  @media (min-width: @desktop-width) {
+    margin-right: 10px;
+  }
+
   &:hover svg,
   &:focus svg {
     fill: @color-seafoam;
@@ -140,7 +145,7 @@
 .product-card__cartlink-pic {
   width: 21px;
   height: 18px;
-  fill: #cccccc;
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 .product-card__picture {

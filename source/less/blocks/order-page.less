@@ -17,10 +17,39 @@
   background-color: @bg-gray;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     font-size: 43px;
     line-height: 50px;
     padding: 93px 0 80px;
     margin-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    padding-bottom: 100px;
+    margin-bottom: 124px;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: center;
+      width: 100%;
+      height: 24px;
+      bottom: -13px;
+      left: 0;
+      background-size: 765px auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: -21px;
+      height: 36px;
+      background-size: 1150px auto;
+    }
   }
 }
 
@@ -40,7 +69,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 650px;
+    width: 700px;
+    margin-bottom: 72px;
   }
 }
 
@@ -54,7 +84,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 922px;
+    margin-bottom: 49px;
   }
 }
 
@@ -112,11 +142,22 @@
     flex-wrap: wrap;
   }
 
+  @media (min-width: @desktop-width) {
+    width: 930px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &--color {
     @media (min-width: @tablet-width) {
       width: 768px;
       justify-content: space-between;
       padding-bottom: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 930px;
     }
   }
 
@@ -126,6 +167,11 @@
       padding-top: 49px;
       justify-content: space-between;
     }
+
+    @media (min-width: @desktop-width) {
+      justify-content: flex-start;
+    }
+
   }
 
   &--mail {
@@ -133,17 +179,26 @@
       align-items: center;
       justify-content: space-between;
     }
+
+    @media (min-width: @desktop-width) {
+      justify-content: flex-start;
+    }
   }
 
   &--textarea {
     @media (min-width: @tablet-width) {
       justify-content: space-between;
     }
+
+    @media (min-width: @desktop-width) {
+      justify-content: flex-start;
+    }
   }
 }
 
 .order__legend {
   padding: 0;
+  margin: 0;
   margin-bottom: 31px;
   position: relative;
   width: 100%;
@@ -153,6 +208,8 @@
   }
 
   &--name {
+    margin-bottom: 26px;
+
     @media (min-width: @tablet-width) {
       margin: 16px 0 0;
     }
@@ -161,6 +218,11 @@
   &--color {
     @media (min-width: @tablet-width) {
       padding: 66px 0 0 51px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 0;
+      padding-top: 63px;
     }
   }
 
@@ -233,12 +295,21 @@
       width: 553px;
       margin-top: 66px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 817px;
+      margin-top: 64px;
+    }
   }
 
   &--name {
     @media (min-width: @tablet-width) {
       margin-left: 124px;
       flex-grow: 1;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 74px;
     }
   }
 }
@@ -251,6 +322,10 @@
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 24px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 700px;
     }
   }
 }
@@ -273,6 +348,10 @@
     @media (min-width: @tablet-width) {
       margin-left: 128px;
       padding-left: 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 78px;
     }
   }
 
@@ -383,11 +462,21 @@
     @media (min-width: @tablet-width) {
       width: 500px;
     }
+
+    @media (min-width: @desktop-width) {
+      width: 700px;
+      margin-left: 82px;
+    }
   }
 
   &--mail {
     @media (min-width: @tablet-width) {
       width: 500px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 700px;
+      margin-left: 58px;
     }
   }
 
@@ -516,6 +605,10 @@
   @media (min-width: @tablet-width) {
     right: 24px;
   }
+
+  @media (min-width: @desktop-width) {
+    right: 6px;
+  }
 }
 
 .order__input-malepic {
@@ -528,6 +621,10 @@
 
   @media (min-width: @tablet-width) {
     right: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 5px;
   }
 }
 
@@ -549,6 +646,12 @@
     width: 500px;
     margin-bottom: 52px;
     font-size: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    margin-bottom: 48px;
+    margin-left: 75px;
   }
 
   &::-webkit-input-placeholder {
@@ -613,6 +716,10 @@
     line-height: 30px;
     margin: 10px 49px 0 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 224px;
+  }
 }
 
 .order__buttonwrapper {
@@ -620,5 +727,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 auto;
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1150px;
   }
 }
