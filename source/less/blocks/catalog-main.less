@@ -1,3 +1,10 @@
+.catalog-main {
+  @media (min-width: @tablet-width) {
+    margin-top: -57px;
+    border-top: 1px solid #dfdfdf;
+  }
+}
+
 .catalog-main__heading {
   font-size: 27px;
   line-height: 30px;
@@ -5,7 +12,43 @@
 
   margin: 0;
   margin-bottom: 30px;
-  padding: 75px 0;
+  padding: 70px 0 78px;
   text-align: center;
   background-color: @bg-gray;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 81px;
+    padding-top: 95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 133px;
+    padding: 92px 0 100px;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: center;
+      width: 100%;
+      height: 24px;
+      bottom: -13px;
+      left: 0;
+      background-size: 765px auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: -21px;
+      height: 36px;
+      background-size: 1150px auto;
+    }
+  }
 }

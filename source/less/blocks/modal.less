@@ -1,0 +1,121 @@
+.modal {
+  width: 320px;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  box-sizing: border-box;
+  background-color: white;
+
+  position: fixed;
+  z-index: 2;
+  top: 120px;
+  left: 50%;
+  margin-left: -160px;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    width: 566px;
+    margin-left: -283px;
+  }
+}
+
+.modal__show {
+  display: block;
+}
+
+.modal__header {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 150px;
+  margin: 30px auto 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 57px;
+    width: auto;
+    text-align: center;
+    margin: 35px auto 11px;
+  }
+}
+
+.modal__text {
+  font-size: 15px;
+  line-height: 30px;
+  color: @text-gray;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.modal__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 260px;
+  margin: 0 auto 30px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+  }
+}
+
+.modal__radiobtn {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: @text-gray;
+
+  width: 82px;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  box-sizing: border-box;
+  background-color: white;
+  padding: 17px 0 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    border: 2px solid #62d1ba;
+  }
+}
+
+.modal__addbtn {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: @text-gray;
+  text-transform: uppercase;
+  border: 0;
+  background-color: @color-seafoam;
+  display: block;
+  width: 260px;
+  margin: 0 auto 46px;
+  padding: 19px 0 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #56c3b2;
+  }
+
+  &:focus {
+    background-color: #56c3b2;
+    opacity: 0.3;
+  }
+}

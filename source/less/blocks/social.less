@@ -1,18 +1,34 @@
 .social__list {
   list-style-type: none;
-  padding: 0;
-  margin: 0 auto;
-
   width: 260px;
+  height: 80px;
+  padding: 0;
+  margin: 0;
   border-bottom: 1px solid @border-lightgray;
+  box-sizing: border-box;
+
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+    border-bottom: 0;
+  }
 }
 
 .social__link {
   display: block;
   width: 60px;
-  padding-top: 25px;
-  padding-bottom: 27px;
   text-align: center;
+
+  &:hover svg,
+  &:focus svg {
+    fill: #46c1ae;
+  }
+
+  &:active svg {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
 }
