@@ -6,11 +6,10 @@
   background-color: white;
 
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 120px;
   left: 50%;
   margin-left: -160px;
-  display: none;
 
   @media (min-width: @tablet-width) {
     width: 566px;
@@ -18,8 +17,8 @@
   }
 }
 
-.modal__show {
-  display: block;
+.modal--close {
+  display: none;
 }
 
 .modal__header {
@@ -72,6 +71,8 @@
   font-weight: bold;
   color: @text-gray;
 
+  display: block;
+  text-align: center;
   width: 82px;
   border: 2px solid rgba(68, 68, 68, 0.1);
   box-sizing: border-box;
@@ -92,11 +93,15 @@
   }
 }
 
+.modal__radioinput:checked + label {
+  border: 2px solid #62d1ba;
+}
+
 .modal__addbtn {
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
-  color: @text-gray;
+  color: white;
   text-transform: uppercase;
   border: 0;
   background-color: @color-seafoam;
@@ -114,8 +119,23 @@
     background-color: #56c3b2;
   }
 
-  &:focus {
+  &:active {
     background-color: #56c3b2;
     opacity: 0.3;
   }
+}
+
+.modal__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: white;
+  opacity: 0.9;
+}
+
+.modal__wrapper--close {
+  display: none;
 }

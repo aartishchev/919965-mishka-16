@@ -77,7 +77,7 @@
             <p class="product-card__features">Рост 30 см, вес 200 г</p>
             <div class="product-card__pricecartwrap">
               <b class="product-card__price">1 200 руб.</b>
-              <a class="product-card__cartlink" href="#">
+              <a class="product-card__cartlink product-card__cartlink--first" href="#">
                 <svg class="product-card__cartlink-pic" width="21" height="18">
                   <use xlink:href="#spriteicon-cart"></use>
                 </svg>
@@ -109,7 +109,7 @@
             <p class="product-card__features">Диаметр 15 см, высота 10 см</p>
             <div class="product-card__pricecartwrap">
               <b class="product-card__price">690 руб.</b>
-              <a class="product-card__cartlink" href="#">
+              <a class="product-card__cartlink product-card__cartlink--second" href="#">
                 <svg class="product-card__cartlink-pic" width="21" height="18">
                   <use xlink:href="#spriteicon-cart"></use>
                 </svg>
@@ -141,7 +141,7 @@
             <p class="product-card__features">Диаметр 30 см, высота 30 см</p>
             <div class="product-card__pricecartwrap">
               <b class="product-card__price">1 500 руб.</b>
-              <a class="product-card__cartlink" href="#">
+              <a class="product-card__cartlink product-card__cartlink--third" href="#">
                 <svg class="product-card__cartlink-pic" width="21" height="18">
                   <use xlink:href="#spriteicon-cart"></use>
                 </svg>
@@ -238,6 +238,28 @@
       </div>
     </div>
   </footer>
+  <section class="modal modal--close">
+    <h2 class="modal__header">Добавить в корзину</h2>
+    <p class="modal__text">Выберите размер:</p>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <ul class="modal__list">
+        <li class="modal__item">
+          <input class="modal__radioinput visually-hidden" id="S" type="radio" name="size" value="S">
+          <label class="modal__radiobtn" for="S">S</label>
+        </li>
+        <li class="modal__item">
+          <input class="modal__radioinput visually-hidden" id="M" type="radio" name="size" value="M">
+          <label class="modal__radiobtn" for="M">M</label>
+        </li>
+        <li class="modal__item">
+          <input class="modal__radioinput visually-hidden" id="L" type="radio" name="size" value="L">
+          <label class="modal__radiobtn" for="L">L</label>
+        </li>
+      </ul>
+      <button class="modal__addbtn" type="submit">Добавить</button>
+    </form>
+  </section>
+  <div class="modal__wrapper modal__wrapper--close"></div>
   <script src="js/picturefill.min.js"></script>
   <script src="js/toggle.js"></script>
   <script src="js/modal.js"></script>

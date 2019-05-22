@@ -1,16 +1,23 @@
-var link = document.querySelector(".modal__listener");
+var link = document.querySelector(".week-product__button");
 var popup = document.querySelector(".modal");
-var wrapper = document.querySelector(".wrapper");
-var close = document.querySelector(".wrapper__close");
+var wrapper = document.querySelector(".modal__wrapper");
+var cart1 = document.querySelector(".product-card__cartlink--first");
+var cart2 = document.querySelector(".product-card__cartlink--second");
+var cart3 = document.querySelector(".product-card__cartlink--third");
 
-link.addEventListener("click", function (evt) {
+function openModal (evt) {
   evt.preventDefault();
-  popup.classList.add("modal__show");
-  wrapper.classList.add("wrapper__close");
-});
+  popup.classList.remove("modal--close");
+  wrapper.classList.remove("modal__wrapper--close");
+}
 
-close.addEventListener("click", function (evt) {
+link && link.addEventListener("click", openModal);
+cart1 && cart1.addEventListener("click", openModal);
+cart2 && cart2.addEventListener("click", openModal);
+cart3 && cart3.addEventListener("click", openModal);
+
+wrapper.addEventListener("click", function(evt) {
   evt.preventDefault();
-  popup.classList.remove("modal__show");
-  close.classList.remove("wrapper__close")
-});
+  popup.classList.add("modal--close");
+  wrapper.classList.add("modal__wrapper--close");
+})
